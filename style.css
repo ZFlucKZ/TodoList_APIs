@@ -1,0 +1,190 @@
+/* ----------------- FONTS ----------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* ----------------- VARIABLES CSS ----------------- */
+:root {
+  /*========== Font and typography ==========*/
+  /* 1rem = 16px */
+  --body-font: 'Poppins', sans-serif;
+  --biggest-font-size: 1.75rem;
+  --h1-font-size: 2.4rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+  --tiny-font-size: 0.625rem;
+  --biggest-icon-size: 2rem;
+  --normal-icon-size: 1.5rem;
+  --small-icon-size: 1rem;
+  --biggest-logo-size: 3rem;
+  --normal-logo-size: 2.5rem;
+  --small-logo-size: 2rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  /*========== Colors ==========*/
+  /*
+        Blue: #74b9ff 
+        Teal: #81ecec
+        Blue-Dark: #0984e3 
+        Blue-Darker: #032844
+        Blue-Darker2: #021a2d
+        Blue-Darkest: #010d17
+        Gray: #dfe6e9
+        Gray-Dark: #b2bec3
+  */
+  --text-title-color: #74b9ff;
+  --text-color: #dfe6e9;
+  --text-color-dark: #b2bec3;
+  --body-color: #010d17;
+  --container-color: #032844;
+  --icon-color: #dfe6e9;
+  --logo-color: #81ecec;
+  --body-color-light: #021a2d;
+  --button-color: #0984e3;
+  --button-color-dark: #076ab6;
+
+  /*========== Border ==========*/
+  --border-radius-small: 5px;
+  --border-radius-medium: 10px;
+  --border-radius-large: 15px;
+}
+
+/* ----------------- BASES ----------------- */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+input:focus {
+  outline: none;
+}
+
+input::placeholder {
+  color: var(--text-color-dark);
+}
+
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+  transition: 0.4s;
+  /* for light mode animation */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--font-semibold);
+  text-align: center;
+}
+
+h1 {
+  font-size: var(--h1-font-size);
+  color: var(--text-title-color);
+}
+
+h2 {
+  font-size: var(--h2-font-size);
+}
+
+h3 {
+  font-size: var(--h3-font-size);
+}
+
+p {
+  text-align: justify;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  line-height: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+ion-icon,
+input[type='checkbox'] {
+  cursor: pointer;
+  transform: scale(1.5);
+}
+
+ion-icon {
+  color: red;
+}
+
+/* ----------------- Tasks Container ----------------- */
+#container {
+  margin: 2rem auto 0 auto;
+  /* border: 1px white solid; */
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  row-gap: 1rem;
+}
+
+#add {
+  background-color: var(--button-color-dark);
+  border: none;
+  border-radius: 5px;
+  color: var(--text-color);
+  padding: 0.5rem 1rem;
+}
+
+#list {
+  align-self: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.2rem;
+}
+
+#list li {
+  width: 100%;
+  padding-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px white solid;
+}
+
+#list label {
+  width: 90%;
+  font-size: var(--h2-font-size);
+  margin-left: 1rem;
+  margin-right: auto;
+  word-wrap: break-word;
+  line-height: 1.5rem;
+}
