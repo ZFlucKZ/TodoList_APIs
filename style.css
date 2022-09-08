@@ -188,3 +188,7 @@ ion-icon {
   word-wrap: break-word;
   line-height: 1.5rem;
 }
+
+input[type="checkbox"]:checked+label {
+  text-decoration-line: line-through;
+}
